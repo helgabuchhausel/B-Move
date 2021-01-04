@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">MoveSmart</string>
+    <string name="search_hint">Hint</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <!-- research strings -->
+    <string name="r_tab_layout1">Facts &amp; Figures</string>
+    <string name="r_tab_layout2">Cities</string>
+    <string name="r_tab_layout3">Transportation</string>
+    <string name="r_tab_layout4">Food &amp; Beverages</string>
+    <string name="r_tab_layout5">Apartments</string>
+    <string name="r_tab_layout6">Work</string>
+    <string name="r_tab_layout7">Language</string>
+    <string name="r_tab_layout8">Comparison</string>
+    <string name="r_tab_layout9">Statistics</string>
+    <string name="title_activity_chat">ChatActivity</string>
+    <string name="title_activity_to_do_list">ToDoListActivity</string>
+    <string name="later_text">Under construction</string>
+    <!-- Strings used for fragments for navigation -->
+
+
+</resources>
