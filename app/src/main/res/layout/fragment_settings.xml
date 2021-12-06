@@ -1,136 +1,165 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context=".SettingsFragment">
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:id="@+id/dataLinearLayout">
+    <TextView
+        android:id="@+id/nameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="125dp"
+        android:layout_marginRight="125dp"
+        android:text="Name"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintEnd_toStartOf="@+id/changeNameButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:id="@+id/nameTextView"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:textColor="@color/colorWhite"
-                android:text="Name"
-                />
+    <Button
+        android:id="@+id/changeNameButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
+        android:text="change name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/nameTextView"
+        app:layout_constraintTop_toTopOf="parent" />
 
-            <Button
-                android:id="@+id/changeNameButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="change name" />
-        </LinearLayout>
+    <EditText
+        android:id="@+id/nameInput"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="52dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/nameInputButton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/joinedTextTextView"></EditText>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:visibility="invisible"
-                android:id="@+id/nameInput">
-            </EditText>
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:visibility="invisible"
-                android:text="ok"
-                android:id="@+id/nameInputButton">
-            </Button>
-        </LinearLayout>
+    <Button
+        android:id="@+id/nameInputButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
+        android:text="ok"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/nameInput"
+        app:layout_constraintTop_toBottomOf="@+id/joinedTextView"></Button>
+
+    <TextView
+        android:id="@+id/joinedTextTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="52dp"
+        android:text="You joined in: "
+        android:textColor="@color/colorWhite"
+        app:layout_constraintEnd_toStartOf="@+id/joinedTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameTextView" />
+
+    <TextView
+        android:id="@+id/joinedTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="190dp"
+        android:layout_marginLeft="190dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
+        android:text="date "
+        android:textColor="@color/colorWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/joinedTextTextView"
+        app:layout_constraintTop_toBottomOf="@+id/changeNameButton" />
+
+    <ImageButton
+        android:id="@+id/belgianFlag"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginBottom="200dp"
+        android:backgroundTint="@color/colorAccent"
+        android:clickable="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/belgium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/franceFlag"
+        app:layout_constraintHorizontal_bias="0.527"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameInput"
+        app:layout_constraintVertical_bias="0.9" />
+
+    <ImageButton
+        android:id="@+id/germanFlag"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="200dp"
+        android:backgroundTint="@color/colorLightGrey"
+        android:clickable="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/germany"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameInputButton"
+        app:layout_constraintVertical_bias="0.895"></ImageButton>
+
+    <ImageButton
+        android:id="@+id/franceFlag"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginBottom="200dp"
+        android:backgroundTint="@color/colorLightGrey"
+        android:clickable="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/france"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ukFlag"
+        app:layout_constraintStart_toEndOf="@+id/belgianFlag"
+        app:layout_constraintTop_toBottomOf="@+id/nameInput"
+        app:layout_constraintVertical_bias="0.908"></ImageButton>
+
+    <ImageButton
+        android:id="@+id/ukFlag"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginBottom="200dp"
+        android:backgroundTint="@color/colorLightGrey"
+        android:clickable="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/uk"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/germanFlag"
+        app:layout_constraintTop_toBottomOf="@+id/nameInputButton"
+        app:layout_constraintVertical_bias="0.895"></ImageButton>
 
 
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:id="@+id/joinedTextTextView"
-                android:textColor="@color/colorWhite"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:text="You joined in: " />
-
-            <TextView
-                android:id="@+id/joinedTextView"
-                android:textColor="@color/colorWhite"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="date " />
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:id="@+id/flagsLinearLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center|bottom"
-            android:orientation="horizontal">
-
-            <ImageButton
-                android:id="@+id/belgianFlag"
-                android:layout_width="74dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="88dp"
-                android:src="@drawable/belgium"
-                android:scaleType="fitXY"
-                android:clickable="true"
-                android:backgroundTint="@color/colorAccent"/>
-
-            <ImageButton
-                android:id="@+id/ukFlag"
-                android:backgroundTint="@color/colorLightGrey"
-                android:layout_width="74dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="88dp"
-                android:src="@drawable/uk"
-                android:scaleType="fitXY"
-                android:clickable="true"
-                ></ImageButton>
-
-            <ImageButton
-                android:id="@+id/franceFlag"
-                android:backgroundTint="@color/colorLightGrey"
-                android:layout_width="74dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="88dp"
-                android:src="@drawable/france"
-                android:scaleType="fitXY"
-                android:clickable="true"
-                ></ImageButton>
-
-            <ImageButton
-                android:id="@+id/germanFlag"
-                android:backgroundTint="@color/colorLightGrey"
-                android:layout_width="74dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="88dp"
-                android:src="@drawable/germany"
-                android:scaleType="fitXY"
-                android:clickable="true"
-                ></ImageButton>
-
-
-        </LinearLayout>
-
-
-    </LinearLayout>
-
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
